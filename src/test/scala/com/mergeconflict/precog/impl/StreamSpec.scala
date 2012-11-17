@@ -30,7 +30,7 @@ class StreamSpec extends Specification with ScalaCheck {
   implicit def arbSortedMap[K: Arbitrary: Ordering, V: Arbitrary]: Arbitrary[SortedMap[K, V]] =
     Arbitrary(arbitrary[List[(K, V)]] map { SortedMap(_: _*) })
 
-  "Bytes" should {
+  "Stream" should {
     "encode/decode Int" in check { expected: Int => roundtrip(expected) }
     "encode/decode Array[Byte]" in check { expected: Array[Byte] => roundtrip(expected) }
     "encode/decode Option[A]" in check { expected: Option[Int] => roundtrip(expected) }
