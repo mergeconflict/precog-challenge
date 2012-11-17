@@ -60,7 +60,8 @@ Notes / TODOs
   - I haven't implemented Precog's consistency requirement ("If the program is
     forcibly terminated at any point during writing to a disk store, then
     retrieving the disk store may not fail and must preserve all information
-    prior to the most recent call to `flush`).
+    prior to the most recent call to `flush`"). Plan is to just implement it by
+    copying files around.
   - I haven't properly tested performance.
 
   [1]: http://precog.com/blog-precog-2/entry/do-you-have-what-it-takes-to-be-a-precog-engineer
